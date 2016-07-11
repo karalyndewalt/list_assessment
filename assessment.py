@@ -74,8 +74,13 @@ def foods_in_common(foods1, foods2):
         []
 
     """
-
-    return ['the wrong thing']
+    foods1 = set(foods1)
+    foods2 = set(foods2)
+    common = foods1 & foods2
+    if common != []:
+      print list(common)
+    else: 
+      print []
 
 
 def every_other_item(items):
@@ -91,8 +96,7 @@ def every_other_item(items):
        ... )
        ['you', 'are', 'good', 'at', 'code']
     """
-
-    return ['the wrong thing']
+    print items[::2]
 
 
 def largest_n_items(items, n):
@@ -117,7 +121,18 @@ def largest_n_items(items, n):
         [3, 3]
     """
 
-    return []
+    if n == 0:
+      return []
+    items.sort()
+    print items[-n:]
+    # for item in items:
+      # if item > highest:
+      #   highest = item
+      #   largest_list.append(highest)
+      #   print largest_list
+      # else:
+      #   print 999
+      
 
 
 #####################################################################
